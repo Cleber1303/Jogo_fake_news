@@ -5,3 +5,4 @@ __pycache__/
 data/raw/
 models/*.joblib
 !models/.gitkeep
+*:Zone.Identifier
