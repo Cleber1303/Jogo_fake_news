@@ -32,6 +32,7 @@ REGRAS:
   confiável, vaga, inventada ou ausente) e o corpo. Cite trechos quando ajudar.
 - Se o jogador marcou indícios, diga se foram pertinentes para ESTA notícia.
 - Não invente dados que não estejam na notícia.
+- Ao comentar o detector automático, baseie-se nos sinais que ele observou.
 - Tom de mentor, sem sermão."""
 
 
@@ -91,11 +92,16 @@ class Juiz:
             "detector_automatico": {
                 "classe": checador["classe"],
                 "prob_fake": round(checador["prob_fake"], 2),
+                # Sinais de superfície que o classificador observou — permite ao
+                # Juiz explicar a decisão do Checador, não só repetir o número.
+                "sinais_observados": checador.get("features_superficie", {}),
             },
         }
         prompt = (
-            "Avalie a rodada a seguir e dê o feedback ao jogador, citando os "
-            "sinais concretos desta notícia:\n\n"
+            "Avalie a rodada a seguir e dê o feedback ao jogador. Cite os sinais "
+            "concretos desta notícia e, ao comentar o detector automático, explique "
+            "o resultado dele à luz dos 'sinais_observados'. Se o detector divergiu "
+            "do gabarito, comente isso de forma educativa:\n\n"
             + json.dumps(contexto, ensure_ascii=False, indent=2)
         )
         return self.modelo.generate_content(prompt).text.strip()

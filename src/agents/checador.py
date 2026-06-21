@@ -113,15 +113,34 @@ class Checador:
         return max(0.0, min(1.0, score))
 
     # --------------------------- modo completo ------------------------------
-    def treinar(self, textos: List[str], labels: List[int]) -> None:
-        """Treina o pipeline TF-IDF + RandomForest (usado pelo script de treino)."""
+    def treinar(self, textos: List[str], labels: List[int], pipeline=None) -> None:
+        """Treina o Checador.
+
+        Se um `pipeline` já configurado for passado (ex.: o melhor encontrado por
+        busca de hiperparâmetros no script de treino), usa ele. Senão, monta um
+        pipeline padrão TF-IDF + RandomForest com configuração reforçada.
+        """
+        if pipeline is not None:
+            self.pipeline = pipeline
+            self.pipeline.fit(textos, labels)
+            return
+
         from sklearn.ensemble import RandomForestClassifier
         from sklearn.feature_extraction.text import TfidfVectorizer
         from sklearn.pipeline import Pipeline
 
         self.pipeline = Pipeline([
-            ("tfidf", TfidfVectorizer(max_features=5000, ngram_range=(1, 2))),
-            ("clf", RandomForestClassifier(n_estimators=200, n_jobs=-1, random_state=42)),
+            ("tfidf", TfidfVectorizer(
+                max_features=10000,      # vocabulário maior
+                ngram_range=(1, 2),      # palavras isoladas + pares
+                min_df=2,                # ignora termos rraríssimos (ruído)
+                sublinear_tf=True,       # suaviza contagens altas
+                strip_accents="unicode", # "ÁGUA" e "agua" contam igual
+            )),
+            ("clf", RandomForestClassifier(
+                n_estimators=400, n_jobs=-1, random_state=42,
+                class_weight="balanced",
+            )),
         ])
         self.pipeline.fit(textos, labels)
 
