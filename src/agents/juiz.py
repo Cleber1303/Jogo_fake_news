@@ -54,12 +54,21 @@ class Juiz:
         voto_jogador: str,
         indicios_jogador: List[str],
         saida_checador: dict,
+        on_espera=None,
     ) -> str:
-        """Gera o feedback da rodada (string)."""
+        """Gera o feedback da rodada (string).
+
+        Em modo completo, SEMPRE usa o Gemini. Se a quota estourar (429), espera
+        e tenta de novo (retry). on_espera é o callback opcional para a UI avisar
+        que está aguardando.
+        """
         if self.modelo is not None:
-            return self._avaliar_via_gemini(
+            from src.agents.gemini_utils import chamar_com_retry
+            return chamar_com_retry(
+                self._avaliar_via_gemini,
                 titulo, fonte, corpo, gabarito, voto_jogador,
                 indicios_jogador, saida_checador,
+                on_espera=on_espera,
             )
         return self._avaliar_via_template(
             titulo, fonte, corpo, gabarito, voto_jogador,

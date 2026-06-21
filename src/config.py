@@ -30,7 +30,7 @@ MODELO_CHECADOR = Path("models/checador_rf.joblib")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # Nome do modelo Gemini a usar quando em modo completo.
-MODELO_GEMINI = "gemini-1.5-flash"  # 'flash' é mais rápido/barato; troque por '-pro' se quiser
+MODELO_GEMINI = "gemini-2.5-flash"  # 'flash' é mais rápido/barato; troque por '-pro' se quiser
 
 # --- Flags de modo, calculadas uma vez na importação -------------------------
 

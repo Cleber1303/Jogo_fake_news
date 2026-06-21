@@ -36,7 +36,10 @@ class Rodada:
     feedback_juiz: Optional[str] = None
     pontos_ganhos: int = 0
     acertou: bool = False
-
+    # Detalhamento da pontuação por indícios (preenchido só em fakes).
+    indicios_corretos: List[str] = field(default_factory=list)   # marcou e era certo
+    indicios_errados: List[str] = field(default_factory=list)    # marcou e não se aplica
+    indicios_perdidos: List[str] = field(default_factory=list)   # eram certos e não marcou
 
 @dataclass
 class EstadoJogo:
@@ -60,15 +63,16 @@ class Jogo:
         self.juiz = juiz or Juiz()
         self.estado = EstadoJogo()
 
-    def nova_rodada(self, dificuldade: int = 2) -> Rodada:
+    def nova_rodada(self, dificuldade: int = 2, on_espera=None) -> Rodada:
         """Sorteia tópico e veracidade e pede a manchete ao Fofoqueiro."""
         topico = random.choice(TOPICOS)
         veracidade = random.choice(["real", "fake"])
-        manchete = self.fofoqueiro.gerar(topico, veracidade, dificuldade)
+        manchete = self.fofoqueiro.gerar(topico, veracidade, dificuldade,
+                                         on_espera=on_espera)
         return Rodada(manchete=manchete)
 
     def finalizar_rodada(
-        self, rodada: Rodada, voto: str, indicios: List[str]
+        self, rodada: Rodada, voto: str, indicios: List[str], on_espera=None
     ) -> Rodada:
         """
         Recebe a decisão do jogador, roda Checador + Juiz, calcula a pontuação
@@ -97,10 +101,47 @@ class Jogo:
         )
 
         # Pontuação.
+        # Regra base: +10 por acertar real/fake.
+        # Para FAKES, há um ajuste pelos indícios marcados (ver abaixo).
+        # Para REAIS, não há bônus/penalidade de indícios.
         rodada.acertou = (voto == rodada.manchete.veracidade)
+
         if rodada.acertou:
-            rodada.pontos_ganhos = 10 + 2 * min(len(indicios), 5)
+            pontos = 10
             self.estado.acertos += 1
+
+            # Bônus de indícios só faz sentido quando a notícia é fake.
+            if rodada.manchete.veracidade == "fake":
+                from src.game.indicios import INDICIOS_NEUTROS, detectar_indicios
+
+                corretos_possiveis = detectar_indicios(
+                    rodada.manchete.titulo,
+                    rodada.manchete.fonte,
+                    rodada.manchete.corpo,
+                )
+                marcados = set(indicios)
+
+                # Classifica cada marcação do jogador.
+                acertos_ind = marcados & corretos_possiveis          # marcou certo
+                # "errados" = marcou algo que não se aplica E que não é neutro
+                # (indícios neutros não contam contra o jogador).
+                errados_ind = {
+                    i for i in (marcados - corretos_possiveis)
+                    if i not in INDICIOS_NEUTROS
+                }
+                perdidos_ind = corretos_possiveis - marcados          # deixou passar
+
+                rodada.indicios_corretos = sorted(acertos_ind)
+                rodada.indicios_errados = sorted(errados_ind)
+                rodada.indicios_perdidos = sorted(perdidos_ind)
+
+                # +3 por indício correto, -2 por indício errado.
+                # O bônus de indícios nunca derruba o ponto base do acerto:
+                # garantimos que o total da rodada seja no mínimo 10.
+                bonus = 3 * len(acertos_ind) - 2 * len(errados_ind)
+                pontos = max(10, pontos + bonus)
+
+            rodada.pontos_ganhos = pontos
 
         self.estado.pontuacao += rodada.pontos_ganhos
         self.estado.rodadas_jogadas += 1

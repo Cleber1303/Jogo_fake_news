@@ -77,10 +77,23 @@ class Fofoqueiro:
                 config.MODELO_GEMINI, system_instruction=PROMPT_SISTEMA
             )
 
-    def gerar(self, topico: str, veracidade: str, dificuldade: int) -> ManchteGerada:
-        """Gera uma notícia (título + fonte + corpo)."""
+    def gerar(self, topico: str, veracidade: str, dificuldade: int,
+              on_espera=None) -> ManchteGerada:
+        """Gera uma notícia (título + fonte + corpo).
+
+        Em modo completo, SEMPRE gera via Gemini — nunca cai no banco. Se a quota
+        do plano gratuito estourar (429), espera e tenta de novo (retry), de modo
+        que toda notícia seja realmente gerada na hora.
+
+        on_espera: callback opcional repassado ao retry, para a UI avisar o
+        jogador de que está aguardando o limite da API.
+        """
         if self.modelo is not None:
-            return self._gerar_via_gemini(topico, veracidade, dificuldade)
+            from src.agents.gemini_utils import chamar_com_retry
+            return chamar_com_retry(
+                self._gerar_via_gemini, topico, veracidade, dificuldade,
+                on_espera=on_espera,
+            )
         return self._gerar_via_banco(veracidade)
 
     # ----------------------------- modo completo ----------------------------

@@ -14,6 +14,7 @@ Sobre o session_state do Streamlit:
 """
 
 import streamlit as st
+import time
 
 # --- garante que a raiz do projeto esteja no path, venha de onde vier ---
 # O Streamlit executa este arquivo de dentro de src/ui/, então sem isto o
@@ -142,6 +143,24 @@ def coletar_indicios() -> list:
 # ---------------------------------------------------------------------------
 # Telas (fases) do jogo
 # ---------------------------------------------------------------------------
+def criar_aviso_espera():
+    """
+    Cria um callback on_espera(segundos, tentativa) que mostra na tela um aviso
+    enquanto o jogo aguarda o limite da API do Gemini liberar.
+    """
+    placeholder = st.empty()
+
+    def on_espera(segundos: float, tentativa: int) -> None:
+        for restante in range(int(segundos), 0, -1):
+            placeholder.warning(
+                f"⏳ Gerando com IA — aguardando o limite da API liberar "
+                f"({restante}s)...",
+                icon="⏳",
+            )
+            time.sleep(1)
+
+    return placeholder, on_espera
+
 def tela_jogando(jogo: Jogo) -> None:
     rodada = st.session_state.rodada
     m = rodada.manchete
@@ -164,8 +183,11 @@ def tela_jogando(jogo: Jogo) -> None:
     indicios = coletar_indicios() if voto == "Fake" else []
 
     if voto and st.button("Enviar avaliação", type="primary"):
+        placeholder, on_espera = criar_aviso_espera()
         with st.spinner("Checador e Juiz analisando..."):
-            jogo.finalizar_rodada(rodada, voto.lower(), indicios)
+            jogo.finalizar_rodada(rodada, voto.lower(), indicios,
+                                  on_espera=on_espera)
+        placeholder.empty()
         st.session_state.fase = "feedback"
         st.rerun()
 
@@ -182,6 +204,17 @@ def tela_feedback(jogo: Jogo) -> None:
     st.markdown("**Feedback do Juiz**")
     st.write(rodada.feedback_juiz)
 
+    # Detalhamento dos indícios (só aparece em fakes acertadas com marcações).
+    if rodada.acertou and rodada.manchete.veracidade == "fake":
+        if rodada.indicios_corretos or rodada.indicios_errados or rodada.indicios_perdidos:
+            st.markdown("**Seus indícios**")
+            for ind in rodada.indicios_corretos:
+                st.markdown(f"✅ {ind}  ·  +3")
+            for ind in rodada.indicios_errados:
+                st.markdown(f"❌ {ind}  ·  −2 (não se aplica a esta notícia)")
+            for ind in rodada.indicios_perdidos:
+                st.markdown(f"➖ {ind}  ·  (estava presente, você não marcou)")
+
     # Detalhes técnicos do Checador, recolhidos por padrão.
     with st.expander("Ver análise do Checador"):
         c = rodada.saida_checador
@@ -191,7 +224,10 @@ def tela_feedback(jogo: Jogo) -> None:
         st.json(c["features_superficie"])
 
     if st.button("Próxima rodada", type="primary"):
-        st.session_state.rodada = jogo.nova_rodada()
+        placeholder, on_espera = criar_aviso_espera()
+        with st.spinner("Fofoqueiro escrevendo a notícia..."):
+            st.session_state.rodada = jogo.nova_rodada(on_espera=on_espera)
+        placeholder.empty()
         st.session_state.fase = "jogando"
         st.rerun()
 
@@ -200,7 +236,10 @@ def tela_inicio(jogo: Jogo) -> None:
     st.write("Leia cada notícia e decida se é **real** ou **fake**. "
              "Se achar que é fake, marque o que te deixou desconfiado.")
     if st.button("Começar a jogar", type="primary"):
-        st.session_state.rodada = jogo.nova_rodada()
+        placeholder, on_espera = criar_aviso_espera()
+        with st.spinner("Fofoqueiro escrevendo a notícia..."):
+            st.session_state.rodada = jogo.nova_rodada(on_espera=on_espera)
+        placeholder.empty()
         st.session_state.fase = "jogando"
         st.rerun()
 
