@@ -64,29 +64,98 @@ INDICIOS = {
 # temas claro e escuro.
 CSS = """
 <style>
+/* ===== Estilo "Jornal clássico" ===== */
+
+/* Importa uma fonte serifada de jornal (Google Fonts). */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:ital@0;1&display=swap');
+
+/* Card da notícia: papel creme, borda fina, leve sombra. */
 .bloco-noticia {
-    background: #f6f8fa;
+    background: #fbfaf6;
     color: #1a1a1a;
-    border-left: 4px solid #2e7d9a;
-    border-radius: 6px;
-    padding: 18px 20px;
+    border: 1px solid #e2ddd0;
+    border-top: 3px solid #2e2a25;
+    border-radius: 4px;
+    padding: 22px 26px;
     margin: 8px 0 4px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
+/* Título: serifado, grande, como manchete de jornal. */
 .noticia-titulo {
-    font-size: 1.2rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 1.35;
-    margin-bottom: 6px;
-}
-.noticia-fonte {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #5a6470;
+    line-height: 1.25;
+    color: #1a1714;
     margin-bottom: 10px;
 }
+/* Fonte: itálico, menor, com linha separadora embaixo. */
+.noticia-fonte {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #6b6358;
+    border-bottom: 1px solid #e2ddd0;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+}
+/* Corpo: serifado, leitura confortável. */
 .noticia-corpo {
-    font-size: 1.02rem;
-    line-height: 1.5;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #2c2825;
+}
+
+/* Título do jogo no topo, em fonte de jornal.
+   Usa a cor de texto do tema do Streamlit (inherit), que já é clara no tema
+   escuro e escura no tema claro — assim o título aparece nos dois modos. */
+.titulo-jogo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: inherit;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    padding: 6px 0;
+    margin-bottom: 4px;
+}
+.subtitulo-jogo {
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    text-align: center;
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+/* Botões do Streamlit (Enviar, Próxima, Começar): cantos retos de jornal.
+   Não fixamos cor de texto/fundo aqui — são type="primary", então o Streamlit
+   já cuida do contraste nos dois temas. Só ajustamos o formato. */
+.stButton > button {
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Deixa o radio Real/Fake parecido com dois selos.
+   O fundo é claro (#fbfaf6), então fixamos o texto escuro — senão, no tema
+   escuro, o texto fica branco sobre fundo claro e some. O seletor cobre tanto
+   o container do label quanto o texto interno do Streamlit. */
+div[role="radiogroup"] label {
+    border: 1px solid #cfc8ba;
+    border-radius: 4px;
+    padding: 6px 16px;
+    margin-right: 8px;
+    background: #fbfaf6;
+    font-weight: 600;
+}
+div[role="radiogroup"] label,
+div[role="radiogroup"] label p,
+div[role="radiogroup"] label div {
+    color: #2c2825 !important;
 }
 </style>
 """
@@ -255,8 +324,10 @@ def main() -> None:
     iniciar_estado()
     jogo = st.session_state.jogo
 
-    st.title("📰 Caça à Fake News")
-    st.caption("Jogo educativo de detecção de desinformação")
+    st.markdown('<div class="titulo-jogo">Caça à Fake News</div>',
+                unsafe_allow_html=True)
+    st.markdown('<div class="subtitulo-jogo">Jogo educativo de detecção de desinformação</div>',
+                unsafe_allow_html=True)
 
     # Aviso discreto quando rodando em modo demo (sem Gemini / sem modelo).
     if not config.TEM_API or not config.TEM_MODELO:
