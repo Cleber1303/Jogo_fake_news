@@ -222,8 +222,8 @@ def criar_aviso_espera():
     def on_espera(segundos: float, tentativa: int) -> None:
         for restante in range(int(segundos), 0, -1):
             placeholder.warning(
-                f"⏳ Gerando com IA — aguardando o limite da API liberar "
-                f"({restante}s)...",
+                f"⏳ Gerando com IA — o serviço está ocupado, tentando novamente "
+                f"em {restante}s...",
                 icon="⏳",
             )
             time.sleep(1)

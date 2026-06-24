@@ -38,13 +38,10 @@ REGRAS:
 
 class Juiz:
     def __init__(self):
-        self.modelo = None
+        self.cliente = None
         if config.TEM_API:
-            import google.generativeai as genai
-            genai.configure(api_key=config.GOOGLE_API_KEY)
-            self.modelo = genai.GenerativeModel(
-                config.MODELO_GEMINI, system_instruction=PROMPT_SISTEMA
-            )
+            from google import genai
+            self.cliente = genai.Client(api_key=config.GOOGLE_API_KEY)
 
     def avaliar(
         self,
@@ -63,7 +60,7 @@ class Juiz:
         e tenta de novo (retry). on_espera é o callback opcional para a UI avisar
         que está aguardando.
         """
-        if self.modelo is not None:
+        if self.cliente is not None:
             from src.agents.gemini_utils import chamar_com_retry
             return chamar_com_retry(
                 self._avaliar_via_gemini,
@@ -104,7 +101,13 @@ class Juiz:
             "do gabarito, comente isso de forma educativa:\n\n"
             + json.dumps(contexto, ensure_ascii=False, indent=2)
         )
-        return self.modelo.generate_content(prompt).text.strip()
+        from google.genai import types
+        resposta = self.cliente.models.generate_content(
+            model=config.MODELO_GEMINI,
+            contents=prompt,
+            config=types.GenerateContentConfig(system_instruction=PROMPT_SISTEMA),
+        )
+        return resposta.text.strip()
 
     # ------------------------------- modo demo ------------------------------
     @staticmethod

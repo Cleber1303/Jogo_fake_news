@@ -1,16 +1,17 @@
 """
-Utilitários para chamadas ao Gemini com tolerância a limite de quota (429).
+Utilitários para chamadas ao Gemini com tolerância a erros temporários.
 
-O plano gratuito do Gemini limita as requisições por minuto. Quando esse limite
-é atingido, a API levanta um erro 429 (ResourceExhausted) que normalmente já
-informa quantos segundos esperar antes de tentar de novo.
+A API do Gemini pode falhar temporariamente por:
+  - 429 (quota): muitas requisições por minuto no plano gratuito.
+  - 503 (UNAVAILABLE): modelo sobrecarregado por alta demanda.
+  - 500 (INTERNAL): erro interno transitório.
 
-A função chamar_com_retry() envolve uma chamada ao modelo e, em caso de 429,
-espera e tenta novamente — em vez de quebrar ou cair para conteúdo de banco.
-Assim, toda notícia/feedback é sempre gerado de fato pelo Gemini.
+Todos esses costumam se resolver sozinhos. A função chamar_com_retry() envolve
+uma chamada ao modelo e, nesses casos, espera e tenta novamente — em vez de
+quebrar. Assim, toda notícia/feedback é de fato gerado pelo Gemini.
 
 Um callback opcional (on_espera) é chamado antes de cada espera, permitindo que
-a interface mostre uma mensagem como "aguardando o limite da API...".
+a interface mostre uma mensagem de "aguardando..." ao jogador.
 """
 
 import re
@@ -35,21 +36,43 @@ def _segundos_de_espera(erro: Exception, padrao: float = 6.0) -> float:
     return padrao
 
 
-def _eh_erro_de_quota(erro: Exception) -> bool:
-    """Reconhece o erro 429 sem precisar importar a classe específica."""
+def _eh_erro_temporario(erro: Exception) -> bool:
+    """Reconhece erros TEMPORÁRIOS que vale a pena tentar de novo (com espera).
+
+    Cobre, nas duas SDKs:
+      - 429 (quota): muitas requisições por minuto.
+      - 503 (UNAVAILABLE): modelo sobrecarregado ("high demand").
+      - 500 (INTERNAL): erro interno transitório do servidor.
+    Todos esses costumam se resolver sozinhos ao tentar novamente. Erros
+    diferentes (ex.: 401 autenticação, 404 modelo inexistente) NÃO entram aqui,
+    pois repetir não adianta — eles são propagados.
+    """
     nome = type(erro).__name__
-    return nome == "ResourceExhausted" or "429" in str(erro) or "quota" in str(erro).lower()
+    codigo = getattr(erro, "code", None)
+    texto = str(erro).lower()
+    return (
+        nome == "ResourceExhausted"
+        or codigo in (429, 500, 503)
+        or "429" in texto
+        or "quota" in texto
+        or "503" in texto
+        or "500" in texto
+        or "unavailable" in texto
+        or "high demand" in texto
+        or "overloaded" in texto
+    )
 
 
 def chamar_com_retry(
     funcao: Callable,
     *args,
-    max_tentativas: int = 4,
+    max_tentativas: int = 5,
     on_espera: Optional[Callable[[float, int], None]] = None,
     **kwargs,
 ):
     """
-    Executa `funcao(*args, **kwargs)`, tratando erro de quota com espera + retry.
+    Executa `funcao(*args, **kwargs)`, tratando erros temporários (429/503/500)
+    com espera + nova tentativa.
 
     Parâmetros:
         funcao        : a função que faz a chamada ao Gemini.
@@ -64,12 +87,16 @@ def chamar_com_retry(
         try:
             return funcao(*args, **kwargs)
         except Exception as e:
-            if not _eh_erro_de_quota(e):
-                raise  # erro diferente de quota: propaga normalmente
+            if not _eh_erro_temporario(e):
+                raise  # erro não-temporário (ex.: 401): repetir não adianta
             ultimo_erro = e
             if tentativa == max_tentativas:
                 break
-            espera = _segundos_de_espera(e)
+            # Tempo de espera: usa o que a API sugerir (429) ou um backoff
+            # crescente (503/500 não trazem "retry in", então esperamos cada
+            # vez um pouco mais: ~4s, 8s, 12s, 16s).
+            espera_sugerida = _segundos_de_espera(e, padrao=0)
+            espera = espera_sugerida if espera_sugerida > 0 else 4.0 * tentativa
             if on_espera:
                 on_espera(espera, tentativa)
             time.sleep(espera)

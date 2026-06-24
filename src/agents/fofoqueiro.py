@@ -69,13 +69,11 @@ Responda APENAS com o JSON, sem cercas de código, sem comentários."""
 
 class Fofoqueiro:
     def __init__(self):
-        self.modelo = None
+        self.cliente = None
         if config.TEM_API:
-            import google.generativeai as genai
-            genai.configure(api_key=config.GOOGLE_API_KEY)
-            self.modelo = genai.GenerativeModel(
-                config.MODELO_GEMINI, system_instruction=PROMPT_SISTEMA
-            )
+            # Nova SDK google-genai: usa um Client (entende chaves AIza e AQ).
+            from google import genai
+            self.cliente = genai.Client(api_key=config.GOOGLE_API_KEY)
 
     def gerar(self, topico: str, veracidade: str, dificuldade: int,
               on_espera=None) -> ManchteGerada:
@@ -88,7 +86,7 @@ class Fofoqueiro:
         on_espera: callback opcional repassado ao retry, para a UI avisar o
         jogador de que está aguardando o limite da API.
         """
-        if self.modelo is not None:
+        if self.cliente is not None:
             from src.agents.gemini_utils import chamar_com_retry
             return chamar_com_retry(
                 self._gerar_via_gemini, topico, veracidade, dificuldade,
@@ -98,12 +96,17 @@ class Fofoqueiro:
 
     # ----------------------------- modo completo ----------------------------
     def _gerar_via_gemini(self, topico, veracidade, dificuldade) -> ManchteGerada:
+        from google.genai import types
         prompt = (
             f"Tópico: {topico}\n"
             f"Veracidade: {veracidade.upper()}\n"
             f"Dificuldade: {dificuldade}/5"
         )
-        resposta = self.modelo.generate_content(prompt)
+        resposta = self.cliente.models.generate_content(
+            model=config.MODELO_GEMINI,
+            contents=prompt,
+            config=types.GenerateContentConfig(system_instruction=PROMPT_SISTEMA),
+        )
         dados = self._extrair_json(resposta.text)
 
         return ManchteGerada(

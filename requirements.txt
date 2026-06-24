@@ -9,7 +9,7 @@ numpy>=1.24
 joblib>=1.3
 
 # --- LLM Gemini (modo completo) ---
-google-generativeai>=0.7
+google-genai>=1.0
 
 # --- Fase 2 (descomentar quando for usar) ---
 # transformers>=4.40
