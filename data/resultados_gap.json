@@ -1,0 +1,246 @@
+[
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.98,
+    "dificuldade": 1,
+    "acertou": false
+  },
+  {
+    "gabarito": "fake",
+    "previsto": "fake",
+    "prob_fake": 0.9533333333333334,
+    "dificuldade": 2,
+    "acertou": true
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9666666666666667,
+    "dificuldade": 3,
+    "acertou": false
+  },
+  {
+    "gabarito": "fake",
+    "previsto": "fake",
+    "prob_fake": 0.9166666666666666,
+    "dificuldade": 4,
+    "acertou": true
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9533333333333334,
+    "dificuldade": 1,
+    "acertou": false
+  },
+  {
+    "gabarito": "fake",
+    "previsto": "fake",
+    "prob_fake": 0.9633333333333334,
+    "dificuldade": 2,
+    "acertou": true
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9266666666666666,
+    "dificuldade": 3,
+    "acertou": false
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.96,
+    "dificuldade": 5,
+    "acertou": false
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.95,
+    "dificuldade": 1,
+    "acertou": false
+  },
+  {
+    "gabarito": "fake",
+    "previsto": "fake",
+    "prob_fake": 0.94,
+    "dificuldade": 2,
+    "acertou": true
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.96,
+    "dificuldade": 3,
+    "acertou": false
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.88,
+    "dificuldade": 1,
+    "acertou": false
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.97,
+    "dificuldade": 1,
+    "acertou": false,
+    "titulo": "Estudo Revela Benefícios da Caminhada Diária para a Saúde Cardiovascular"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6666666666666666,
+    "dificuldade": 2,
+    "acertou": false,
+    "titulo": "Câmara dos Deputados aprova nova lei de saneamento básico em votação apertada"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.96,
+    "dificuldade": 3,
+    "acertou": false,
+    "titulo": "Cientistas desenvolvem nova técnica de reciclagem para plásticos difíceis de degradar"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9066666666666666,
+    "dificuldade": 4,
+    "acertou": false,
+    "titulo": "Inflação em queda livre: IPCA acumula menor avanço em dois anos"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9666666666666667,
+    "dificuldade": 5,
+    "acertou": false,
+    "titulo": "Descoberta de Novo Material Condutor Revoluciona a Indústria Eletrônica"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9833333333333333,
+    "dificuldade": 1,
+    "acertou": false,
+    "titulo": "Seleção Brasileira de Vôlei Feminino Vence Campeonato Sul-Americano Mais Uma Vez"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9333333333333333,
+    "dificuldade": 2,
+    "acertou": false,
+    "titulo": "Brasil registra recorde de áreas protegidas em 2023"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.98,
+    "dificuldade": 3,
+    "acertou": false,
+    "titulo": "Novo Plano Nacional de Alfabetização é Lançado com Foco em Metodologias Inovadoras"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9733333333333334,
+    "dificuldade": 4,
+    "acertou": false,
+    "titulo": "Anvisa aprova novo protocolo para acompanhamento de doenças crônicas"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.65,
+    "dificuldade": 5,
+    "acertou": false,
+    "titulo": "STF julga constitucional a reeleição para presidentes da Câmara e do Senado"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9666666666666667,
+    "dificuldade": 1,
+    "acertou": false,
+    "titulo": "Inteligência Artificial Revoluciona Atendimento ao Cliente no Brasil"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9033333333333333,
+    "dificuldade": 2,
+    "acertou": false,
+    "titulo": "Inflação desacelera, mas pressiona orçamento familiar"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9866666666666667,
+    "dificuldade": 3,
+    "acertou": false,
+    "titulo": "Nova bactéria descoberta na Amazônia pode ter papel crucial na degradação de plástico"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.97,
+    "dificuldade": 4,
+    "acertou": false,
+    "titulo": "Seleção Brasileira Feminina de Vôlei Conquista Título Inédito na Liga das Nações"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9166666666666666,
+    "dificuldade": 5,
+    "acertou": false,
+    "titulo": "Desmatamento na Amazônia Atinge Menor Nível em Cinco Anos"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9733333333333334,
+    "dificuldade": 1,
+    "acertou": false,
+    "titulo": "Governo Anuncia Novas Diretrizes para o Ensino Médio!"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9566666666666667,
+    "dificuldade": 2,
+    "acertou": false,
+    "titulo": "Estudo aponta aumento de doenças respiratórias em grandes centros urbanos"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6833333333333333,
+    "dificuldade": 3,
+    "acertou": false,
+    "titulo": "Senado aprova nova lei de saneamento básico com foco em universalização"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.9533333333333334,
+    "dificuldade": 4,
+    "acertou": false,
+    "titulo": "Brasil avança na implementação de redes 5G em capitais"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.94,
+    "dificuldade": 5,
+    "acertou": false,
+    "titulo": "Inflação de Serviços Atinge 0,85% em Março, Sinalizando Pressão nos Preços"
+  }
+]

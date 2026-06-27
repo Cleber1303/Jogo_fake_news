@@ -1,0 +1,890 @@
+[
+  {
+    "texto": "Lula desfila sozinho no 7 de Setembro",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Joice Hasselmann aparece sem máscara em hospital após diagnóstico positivo de Covid-19",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "PT publica foto com duplicações em ato em Salvador",
+    "rotulo": "real"
+  },
+  {
+    "texto": "“[Ricardo Nunes] disse que o 8 de janeiro não foi tentativa de golpe”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Própolis tem ação repelente contra o Aedes aegypti",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Gleisi Hoffmann será ministra da Defesa",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Hélio Lopes, isso mesmo, o ?amigão? do Bolsonaro, deputado de EXTREMÍSSIMA DIREITA, resolveu convocar uma audiência pública sobre a chamada ?PEC do Fim dos Pardos?.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "(...) [O] projeto de parceria civil gay da então deputada federal Marta Suplicy (...) tramita no Congresso Nacional há nada menos do que 24 anos",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Muitas informações falsas sobre máscaras, hidroxicloroquina, origem do coronavírus, etc",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Alexandre de Moraes defendeu \"atirar à queima-roupa\" em ministros do STF antes de estar entrar corte.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Belém é a capital com menor índice de atendimento do Programa Saúde da Família, só 24%",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Gente, o Detran já abriu as inscrições para o Programa CNH Social 2020. Acabei de fazer o cadastro online pra ganhar minha Carteira de Motorista 100% grátis! *Está disponível para novos condutores, renovação ou adição de categoria!*",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "No IDEB do meu tempo, em 2013, nós tivemos dois primeiros lugares",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vídeo mostra \"índios yanomami\" em caminhonetes",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Esta imagem mostra uma redução na poluição devido à quarentena imposta para reduzir o contágio do novo coronavírus",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Justin Bieber falou sobre festas de Diddy em música",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Beira-Mar tirou fotos com juíza e promotora em julgamento",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Havan está vendendo smartphones a R$179 por ordem do Procon",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Eduardo Bolsonaro renuncia ao cargo de deputado federal e fica nos EUA",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Lula pergunta por que petistas não entram na Havan, e Luciano Hang responde",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "“[Eduardo Leite] foi selecionado inclusive para um aconselhamento com o próprio Obama”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Candidato do PTB citou o Mapa da Violência Bancária, que coleta informações a partir de notícias publicadas na imprensa para contabilizar ocorrência nas agências bancárias no estado",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Donald Trump criticou Lula e o chamou de ‘escândalo ambulante’",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Está em curso uma fuga em massa de brasileiros para o Paraguai",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Jaden Smith se pronuncia e desabafa sobre festas de P. Diddy",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "A Ferrovia Norte-Sul, que vai ser integrada, aí, à Ferrovia Paraense, tá colocada simplesmente para transporte de minério, não tá incluindo vagão de passageiro",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vídeo mostra manifestação de 29 de junho de 2025 na Avenida Paulista",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O Ceará tem hoje a melhor educação pública do Brasil",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Banco Central quer criar o Real Digital",
+    "rotulo": "real"
+  },
+  {
+    "texto": "afirmação de que pode-se usar camisa de algum candidato ou que remeta a um partido no dia das eleições deste ano.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "O clima da eleição de 2010 era muito diferente do deste ano. Em 2010, o PIB do Estado subiu mais de 8%, o do Brasil mais de 7%",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Caças F-15 dos EUA pousaram na Base Aérea de Natal, no Rio Grande do Norte, como parte do exercício multinacional \"CRUZEX 2024\"",
+    "rotulo": "real"
+  },
+  {
+    "texto": "“No ano passado nós tivemos o menor índice de homicídios na nossa cidade.”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Valor do produto R$ 3,15. Valor do imposto R$31,45",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vídeo mostra tsunami que atingiu o Havaí em julho de 2025",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O número de imóveis abandonados na cidade de São Paulo chegou, segundo o IBGE, a 590 mil.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Os números para São Paulo são positivos. Homicídio: 8 para cada 100 mil. Miami hoje acho que é 12",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Alguns querem tratar a questão como se vivêssemos no regime parlamentarista, onde a suspeição política de um presidente é condição necessária e suficiente para que ele seja afastado.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Tudo que você precisa saber sobre as Eleições Municipais de 2024",
+    "rotulo": "real"
+  },
+  {
+    "texto": "“Fique em casa, a economia vem depois”: Comboio do CEAGESP rumo a Araraquara/SP levando alimentos.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Foram 400 km de faixas exclusivas e corredores entregues.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Fraude no INSS: Homens do PT foram presos nesta primeira fase da operação. Dos 22 vermes que foram presos, 20 eram do PT",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Seis milhões de empresas estão no Serasa [...]",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Treinadora Jessica Radcliffe foi morta por orca que treinava.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Nestlé anuncia doação de oito mil caixas de leite condensado para as Forças Armadas.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Afirmação de que é possível retirar a segunda via do Título de Eleitor no Distrito Federal até esta quinta-feira (22)",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Ele [Ricardo Nunes] mantinha no ano até o ano passado um secretário de mudanças climáticas que era negacionista do aquecimento global.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Holocausto econômico brasileiro - Dinheiro da previdência será usado para cobrir acordo judicial da Petrobras",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Obama me grampeou.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Estudo revela que vacina de gripe aumenta risco de adoecer",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Na Venezuela, cidadãos desesperados para votar contra a ditadura de Nicolás Maduro estão atravessando o Lago Maracaibo depois de terem sido impedidos entrar na fronteira terrestre",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "A reforma tributária é inconstitucional",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "CoronaVac altera código genético humano e pode 'causar homossexualismo'",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Arábia Saudita construiu o maior e mais alto estádio do mundo",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Exercícios com a língua ajudam na prevenção contra o Alzheimer",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Segundo Bolsonaro, Cloroquina é coisa de conservador e Cannnabis medicinal é coisa de comunista. Países com protocolos de Cloroquina: China, Venezuela, Cuba, Índia... Países com protocolos de Cannabis medicinal: EUA, Reino Unido, Alemanha, Israel...",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Aprovamos projetos que combatem a impunidade, pois é ela que estimula o crime e amedronta a população. Com coragem e maturidade, votamos a redução da maioridade — e aprovamos o projeto com 323 votos, ampla maioria.. . Colocamos em votação o projeto que regulamenta os direitos do...",
+    "rotulo": "real"
+  },
+  {
+    "texto": "[O trabalhador terceirizado] ganha menos, tem jornadas maiores e está muito mais vulnerável a acidentes de trabalho. De cada cinco acidentes com morte, quatro são com terceirizados.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Lula é vaiado com gritos de \"Lula, ladrão, seu lugar é na prisão\" durante chegada na Argentina",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Ministro do STF Edson Fachin foi advogado do MST",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Aloe vera cura câncer",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Cida Borghetti diz que Paraná tem cumprido gasto com saúde",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Como vamos fazer para devolver aos municípios os R$ 227 milhões [do IPVA destinado ao Fundeb] que o estado arrecadou e não repassou?",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vacina contra a dengue é arma biológica e causa microcefalia",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "CO2 não é poluente e não afeta temperatura na terra",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Bolsonaro afirmou em 2018 que o indulto de Natal daquele ano seria o \"último\"",
+    "rotulo": "real"
+  },
+  {
+    "texto": "O número de homens assassinados por suas parceiras é maior que o de mulheres assassinadas por seus parceiros.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O assassino de Charlie Kirk com uma camisa em apoio a Donald Trump",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O estado que mais fez investimento público do país nos últimos três anos tem sido o estado do Ceará",
+    "rotulo": "real"
+  },
+  {
+    "texto": "China se inspirou na bandeira da Palestina para criar uniformes para as Olimpíadas de Paris",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Vladimir Putin lança oficialmente a moeda dos brics que vai substituir o dólar",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Entenda se Estados Unidos podem sobretaxar Brasil, China e Índia em 500% por comprarem produtos derivados do petróleo e outros bens da Rússia.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Como funcionam os golpes de chamadas de robôs",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Joe Biden cai na escada ao desembarcar de um avião em chegada à Polônia",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "PIB do Paraná é maior que o de Uruguai, Bolívia e Paraguai somados",
+    "rotulo": "real"
+  },
+  {
+    "texto": "O Brasil é responsável por 50% das mortes da população transexual no mundo",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Kamala Harris recebia instruções durante debate com Donald Trump na ABC News",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Euro digital vai eliminar o dinheiro em espécie",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Luiz Inácio Lula da Silva (PT) gastou R$ 16,5 bilhões com a Lei Rouanet em 2023",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Bolsonaro ontem a (sic) noite no CFAP em Sulacap",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "'40% do esgoto que é captado é jogado no Rio Tietê.”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "“Os próximos governos vão ser chamados a pagar com juros os R$ 11 bilhões que deixarão de ser pagos nos próximos anos”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "[A hidroxicloroquina] não é um retroviral e possui muitos efeitos colaterais adversos, como cardíacos",
+    "rotulo": "real"
+  },
+  {
+    "texto": "[A mudança do brasão no passaporte brasileiro] Está dentro do programa [de metas] de 100 dias (...) de governo",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Oração para mulher falar pouco; ser obediente e não mexer no celular do marido!",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Moeda Drex do governo Lula vai acabar com dinheiro físico e poupança",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Entre 2013 e 2018, a Fina Flor Produções, empresa que pertence a atriz (sic) da Globo, Maria Flor, (sic) recebeu dos governos anteriores R$ 10.476.871. A partir do governo Bolsonaro a empresa dessa atriz não recebeu 1 centavo sequer de dinheiro público",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Aditivo alimentar do Bill Gates, 'Bovaer', está associado à infertilidade masculina e danos reprodutivos",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Por que que para senador, governador, tinha só 348 e apareceu apareceu 263 para votar? Da onde surgiu essas 340 pessoas que votaram aí para presidente? Que estranho",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Foto mostra Doria indo votar com máscara estampada com bandeira da China",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Noticiário de TV, em alemão, mostra elefantes atravessando um córrego e o texto \"desastre com incêndio na Amazônia\"",
+    "rotulo": "real"
+  },
+  {
+    "texto": "afirmação de que um candidato a deputado distrital é o docente acusado de humilhar e expor um aluno na rede pública do Distrito Federal",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Ave foi queimada durante incêndio florestal no Brasil tentando proteger ninho",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Flávio Dino se encontrou com líderes de uma das maiores organizações criminosas do mundo",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Governo financiará viagem de artistas aos EUA para homenagear Paulo Gustavo",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Ele decidiu o valor há três meses atrás e agora ele fala que está indignado e que a taxa é roubo",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Saiba como se proteger de golpes no WhatsApp",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Atualização do WhatsApp fará as polícias militares, civis e federal terem acesso às mensagens no aplicativo.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Não assumiríamos o comportamento do Pimentel, que foi flexibilizar a legislação ambiental logo após isso, foi votado na Assembleia e flexibilizado por esse governo",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Como se proteger da invasão de contas e perfis na internet",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Nenhum governo anterior atrasou por tanto tempo repasses a bancos públicos.. Acesse os dados aqui.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Relatório do Fórum de Segurança Pública aponta um aumento de mais de 10 mil casos em comparação ao ano anterior.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Tivemos há pouco mais de dez anos um desastre em Petrópolis. Não teve a participação do Cemaden. Morreram centenas de pessoas. Tivemos um outro no ano passado, já com a participação do Cemaden, com sinais de alerta, e apesar de ter chovido muito mais do que há dez anos, o número...",
+    "rotulo": "real"
+  },
+  {
+    "texto": "O que é phishing ou pescaria digital",
+    "rotulo": "real"
+  },
+  {
+    "texto": "“A Universidade Estadual do Ceará só tem 69% de [professores] efetivos, a Urca só tem 60%'",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Afirmação de que o Distrito Federal tem mais de 5,5 médicos para cada 1 mil habitantes. A informação foi usada pelo candidato à reeleição ao Governo do DF (GDF), Ibaneis Rocha (MDB), no Twitter",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Doutor Rosinha diz que trens levam 20% das cargas a Paranaguá",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Gabriel Galípolo denunciou à PF crimes contra o Banco Central",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "21.000 casos de miocardite confirmados pelo CDC",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Como funciona o golpe do pix errado",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Funcionários de hotel vietnamita seguram portas fechadas no supertufão Yagi",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "informação que o último reajuste salarial dos professores do Distrito Federal foi feito no governo de Agnelo Queiroz (PT), em 2013, e só terminou de ser pago na gestão atual de Ibaneis Rocha (MDB) após ações na Justiça.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Jorge Bernardi disse que o governo do Paraná comprou vacinas 'condenadas' pela Anvisa e OMS",
+    "rotulo": "real"
+  },
+  {
+    "texto": "em 2012, a despesa de custeio da Uepa foi de R$ 50 milhões. Passados quatro anos, e hoje o número não é muito diferente, são os mesmos R$ 50 milhões. Quando a gente fala de investimento, em 2012 foram 16 milhões; em 2016, foram dois milhões e meio",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Mistura de vinagre de maçã, mel e água reduz colesterol e emagrece",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Pimentel aumentou impostos de mais de 180 produtos, incluindo energia, combustível, material escolar e até remédios",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Equipe de nado artístico de Israel escreve Bring Them Home Now em Paris-2024",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "General Lessa defendeu estado de guerra",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "afirmação de que só é possível instalar o aplicativo do e-Título até sábado (1º/10)",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Internações por AVC explodiram após vacinas contra covid",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Palestino pega fogo ao tentar incendiar bandeira de Israel",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "\"Fui ao Plenário das Nações Unidas receber o prêmio mundial de combate a mortalidade infantil\"",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Leonardo Di Caprio pede desculpas por festas do branco de Diddy",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Teste em cão dá positivo para o novo coronavírus",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Diferente de outros políticos, Lula não enriqueceu.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Manifestação de venezuelanos em Roraima foi a favor de Bolsonaro",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Números disponíveis no DATASUS são praticamente os mesmos que os apresentados pela candidata do PSTU para criticar investimentos na área de saúde do estado",
+    "rotulo": "real"
+  },
+  {
+    "texto": "O crime que aconteceu em Barcarena, da Hydro, não é o primeiro. Pelo menos há 19 crimes cometidos por essa mineradora e mais a Imerys lá em Barcarena, que está envenenando a população e poluindo os nossos rios",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Força Aérea Brasileira (FAB) vai paralisar a operação de 40 aeronaves e afastar 137 pilotos porque o governo brasileiro cortou a verba da instituição",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Saiba como se precaver de golpes por telefone que utilizavam técnica conhecda como 'spoofing'",
+    "rotulo": "real"
+  },
+  {
+    "texto": "“Em São Paulo, nós pagamos os pedágios mais caros que existem.”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Alexandre de Moraes fez gesto obsceno em jogo do Corinthians",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Flávio Dino diz: \"Essa PL 2.630, por exemplo, é uma delas, que nos deixará muito fortalecidos. Então, quais são os nossos objetivos, além de arruinar a economia? É aumentar o desemprego, destruir o comércio, deixar o povo desabastecido, falir as empresas, falir também o agronegó...",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "“[Eduardo Leite] no último ano [de governo] criou a taxa do lixo”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "No Brasil quem paga mais imposto proporcionalmente à sua renda é o pobre.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Veja como funcionam os algoritmos e dicas para tentar escapar das bolhas",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Governo Lula anunciou o fim do seguro-desemprego em 2025",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Governo federal pediu ao STF para suspender investigações da fraude no INSS",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "9 pessoas morreram na UTI de Canoas e Paulo Pimenta sabia",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Fraude eleitoral: USAID pagou US$ 500 mil à empresa Smartmatic, que forneceu urnas eletrônicas ao Brasil em 2022",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O Peru suspendeu os testes da \"vacina chinesa\" após um voluntário apresentar paralisia nas pernas",
+    "rotulo": "real"
+  },
+  {
+    "texto": "No governo Temer, a gasolina passou de 4 para 5 reais",
+    "rotulo": "real"
+  },
+  {
+    "texto": "A inflação dos alimentos tá em 15%",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vinagre elimina rugas.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "“No estado do Rio Grande do Sul, ainda há 62 municípios sem acesso asfáltico”.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "G1 publicou matéria afirmando que Lula disse que irá adotar pronome neutro na Bíblia",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Meghan Markle usou esta roupa em homenagem a Diana após a morte da Rainha Elizabeth II",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O documentário Plandemic com a Dra. Judy Mikovits, conta a verdade sobre a fraude das vacinas e, ainda, sobre a falsa \"pandemia\" de coronavírus",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Fui escolhido o melhor prefeito entre as grandes cidades do Rio Grande do Sul",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Governo Lula aprova lei que acaba com obrigatoriedade de aulas de autoescola",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Vídeo mostra MST destruindo estação de energia no Amapá.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Lula bate o martelo: CNH gratuita para milhares de brasileiros e também para analfabetos",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Revista francesa publicou foto de Greta Thunberg sob a manchete \"Os charlatães da ecologia\"",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vinagre para combater o mosquito da dengue",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Família fica revoltada ao abrir caixão de criança morta sem limpeza nenhuma e descobrir que não foi por covid-19",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Programa de Isenção de Visto dos EUA não inclui Reino Unido e nenhuma nação africana",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O que estamos denunciando é que o impedimento de Lula seria uma fraude nas eleições. [O boicote] é uma coisa que não está sendo oficialmente discutida ainda, mas vai caminhar para isso se ele for impedido de ser candidato. É um processo que não tem base jurídica.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Candidato do PROS também acerta na relação entre os investimentos e o orçamento do estado para o mesmo período",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vídeo mostra retroescavadeira descartando doações no município de Encantado (RS)",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Paolla Oliveira faz propaganda de crédito fácil e empréstimo.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Vejam os municípios do Marajó têm os piores índices de desenvolvimento humano do Brasil",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Não é por acaso que hoje ele [o governo de Minas] divide, paga as professoras, mas divide, redivide e paga atrasado",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Nas Apacs, os presos têm a chance de, a cada 10, 9 jamais voltarem ao crime",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Entre 2009 e 2016, taxa de assassinatos diminuiu de 48,05 para 34,80 por cada 100 mil habitantes na maior cidade do Sertão pernambucano",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Donald Trump diz que nos Estados Unidos têm mexicanos, brasileiros e outros lixos latinos demais!",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "No final do voto, ele [relator do caso Wilson Santiago na Câmara] diz: ‘mas o mérito é muito grave e a Mesa Diretora precisa encaminhar uma representação do deputado Wilson Santiago ao Conselho de Ética’. E isso foi aprovado em conjunto e a Mesa já começa a trabalhar",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Lula reduziu IOF de 6,38% para 3,38% em 2025",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "[Temos] Um desemprego de 1,2 milhão de pessoas, 400 mil jovens [em Minas Gerais]”",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vagas de estacionamento prioritárias para pessoas LGBT serão obrigatórias até 2024.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Validade da CNH passou para 10 anos e limite de pontos, para 40",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Com muito ódio: Daniela Mercury ataca Jesus Cristo e em show dispara: \"Jesus era bicha, gay, muito viado sim\"",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Desembargador no caso de Flávio Bolsonaro na comitiva presidencial em Dubai",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Nunca se falou de contagem manual em discussão sobre voto impresso",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Entenda como a modernização de cadastros da Reforma Tributária pode reajustar seu IPTU",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Jair Bolsonaro foi comparado a Hitler em capa da Charlie Hebdo",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Mais de 1,3 milhão de cidadãos sem condição de trabalhar",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Primeira-ministra italiana se recusa a abraçar Lula no G7",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Governadora do Rio Grande do Norte retirou informações dos impostos estaduais e municipais das notas fiscais de combustíveis.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Esse é o deputado que chamou Moro de ladrão",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "No geral, as alíquotas de Minas estão mais altas que as de São Paulo",
+    "rotulo": "real"
+  },
+  {
+    "texto": "É enganoso que um único técnico do TSE possa alterar o resultado das eleições mexendo no código-fonte das urnas eletrônicas",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Eu sei ler bem e li, no programa de governo do nosso candidato Romeu Zema, expressamente a proposta de privatização da saúde, inclusive dizendo que não deve ser o poder público, o governo, o responsável direto pela área da saúde",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Eriksen havia recebido a vacina Pfizer em 31 de Maio",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Apenas 1% dos habitantes da região do Jacarezinho têm curso superior completo, frente aos 58% da Lagoa. — Marcelo Freixo (PSOL)",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Revista francesa Charlie Hebdo lançou edição com capa com a imagem de Dias Toffoli.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Concedemos um auxílio emergencial de 800 dólares para 68 milhões de pessoas em 2020.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Que a loja Select Smartphone foi obrigada a mudar de nome por participar em um esquema de contrabando.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Lei garante CNH gratuita para todos os brasileiros",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Número leva em conta o total de investimentos feitos no estado no setor de janeiro de 2015 até agosto de 2018",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Tadala Premium previne o câncer de próstata.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "O erro [das contas do PSTU identificadas pelo TRE-SP] não está nas contas, o erro está na perda do prazo de levar os esclarecimentos sobre a prestação de contas. (...) A Justiça não verificou, depois que ela pediu, a justificativa e os documentos que apresentavam a prestação de ...",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Mulher do Gilmar Mendes numa entrevista sobre a nomeação dela na Itaipu",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "As suas empresas [Grupo Zema] tiveram vários empréstimos obtidos junto ao BNDES e ao BDMG com juros subsidiados por toda a população",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vídeo mostra Bolsonaro sendo recebido por multidão em aeroporto da Argentina para posse de Milei",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Lula corta verba e FAB é obrigada a paralisar operação de 40 aeronaves",
+    "rotulo": "real"
+  },
+  {
+    "texto": "\"Faz o L\": Caminhão-pipa a R$ 155 mil por dois meses.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Netanyahu envia seu filho para servir o país como soldado em 2023",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Transações acima de 2,000,00 serão reporatadas a RFB",
+    "rotulo": "real"
+  },
+  {
+    "texto": "AVC de Pirulla foi causado por vacinas",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Trump manda mensagem para Bolsonaro: \"Seja forte Bolsonaro! E ao grande povo do Brasil, nunca desista! Vocês são lutadores! Defensores da liberdade, fé e família. A América está com você, continue orgulhoso, o mundo está assistindo!\"",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "PRETA GIL ELA ESCREVEU PRA BOLSONARO ANTES DE MORRER? O CONTEÚDO VAZOU!",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "'O Bolsa Família é 0,9% do Orçamento.'",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Tomar azitromicina, ivermectina e acetilcisteína para curar Covid-19.",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "A cura é oficial de acordo médicos infectologistas e imunologistas",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Comprova Explica a taxação anunciada por Trump ao Brasil",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vereador foi empurrado dentro de esgoto a céu aberto por não cumprir promessa de campanha",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Agora no início de fevereiro o governo Pimentel já privatizou 360 km em estradas que passarão a cobrar pedágios",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Lula compara pobres a papel higiênico",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Coronavac tem eficácia global de 50,38% e será preciso tomar duas doses da vacina",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Geddel Vieira Lima denuncia existência de fazendas de Lula e Dilma no Brasil e no exterior",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Os gastos militares globais cresceram pelo nono ano consecutivo e atingiram US$ 2,4 bilhões.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Projeto Comprova explica por que aboliu etiquetas em verificações",
+    "rotulo": "real"
+  },
+  {
+    "texto": "“Nota à imprensa Polícia Civil PC - AM acaba de realizar a prisão em flagrante de cabos eleitorais do candidato David Almeida com uma quantia de 46 mil reais fazendo compra de votos no bairro Jorge Teixeira. Os envolvidos foram encaminhando-se à delegacia para ser lavrado o flag...",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Preços do arroz vão disparar porque a produção nacional está sendo vendida para o exterior. \"Fontes da agricultura\" alertaram sobre um aumento de até 400% no preço do produto nos mercados",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Segundo dados da Secretaria de Comércio Exterior, a maior parte das exportações de mangas e uvas produzidas em Petrolina é feita através dos portos de Salvador e de Pecém, no Ceará",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Estátua satanista foi inaugurada em Belém durante a COP30",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Fotógrafo chora na despedida do Messi do Barcelona",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "a informação de que quatro deputados federais da bancada do Distrito Federal votaram contra ou se ausentaram da votação da Proposta de Emenda à Constituição (PEC) que visava estabelecer a adoção do voto impresso no país.",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Ana Paula Henkel cita falas do médico Robert Malone sobre vacinas contra a covid-19",
+    "rotulo": "fake"
+  },
+  {
+    "texto": "Operação mostra que há organização criminosa dentro do STF",
+    "rotulo": "real"
+  },
+  {
+    "texto": "O governo federal assinou o primeiro contrato para a compra das vacinas para o Covid em agosto de 2020",
+    "rotulo": "real"
+  },
+  {
+    "texto": "Vacina contra covid causa varíola dos macacos",
+    "rotulo": "fake"
+  }
+]

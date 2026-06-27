@@ -1,0 +1,362 @@
+[
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.73,
+    "acertou": false,
+    "n_palavras": 303,
+    "inicio": "Em um cenário de crescente polarização política no país, o Congresso Nacional de"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "real",
+    "prob_fake": 0.5,
+    "acertou": true,
+    "n_palavras": 280,
+    "inicio": "O Índice Nacional de Preços ao Consumidor Amplo (IPCA) apresentou uma desacelera"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.5533333333333333,
+    "acertou": false,
+    "n_palavras": 292,
+    "inicio": "O governo federal apresentou nesta terça-feira uma proposta de ajuste orçamentár"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6933333333333334,
+    "acertou": false,
+    "n_palavras": 331,
+    "inicio": "O Comitê de Política Monetária (Copom) do Banco Central decidiu, em sua mais rec"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.8166666666666667,
+    "acertou": false,
+    "n_palavras": 337,
+    "inicio": "Um recente estudo divulgado por pesquisadores da Fundação Oswaldo Cruz (Fiocruz)"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "real",
+    "prob_fake": 0.46,
+    "acertou": true,
+    "n_palavras": 362,
+    "inicio": "O governo estadual anunciou, nesta terça-feira, um pacote de medidas emergenciai"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.67,
+    "acertou": false,
+    "n_palavras": 403,
+    "inicio": "**Conselho Nacional de Educação Homologa Base Nacional Comum Curricular para o E"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.71,
+    "acertou": false,
+    "n_palavras": 353,
+    "inicio": "Dados preliminares divulgados por instituições de pesquisa ambiental indicam uma"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6633333333333333,
+    "acertou": false,
+    "n_palavras": 342,
+    "inicio": "O projeto de reforma administrativa, considerado crucial pelo governo para o ree"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.69,
+    "acertou": false,
+    "n_palavras": 343,
+    "inicio": "O debate em torno da proposta de reforma administrativa ganhou intensidade no Co"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.61,
+    "acertou": false,
+    "n_palavras": 325,
+    "inicio": "**Câmara dos Deputados aprova pacote de medidas para impulsionar economia**\n\nEm "
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.8266666666666667,
+    "acertou": false,
+    "n_palavras": 283,
+    "inicio": "O cenário político brasileiro segue em ebulição com os desdobramentos das invest"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.51,
+    "acertou": false,
+    "n_palavras": 252,
+    "inicio": "A inflação em dezembro registrou desaceleração, fechando o ano de 2017 com índic"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.7333333333333333,
+    "acertou": false,
+    "n_palavras": 317,
+    "inicio": "**Especialistas alertam para o aumento de casos de doenças respiratórias em capi"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "real",
+    "prob_fake": 0.49666666666666665,
+    "acertou": true,
+    "n_palavras": 324,
+    "inicio": "O governo federal anunciou nesta segunda-feira (15) um novo pacote de medidas pa"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.54,
+    "acertou": false,
+    "n_palavras": 253,
+    "inicio": "O Ministério da Educação (MEC) divulgou nesta terça-feira (20) dados preliminare"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.7,
+    "acertou": false,
+    "n_palavras": 339,
+    "inicio": "Cientistas alertam para aceleração do desmatamento na Amazônia durante o período"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6866666666666666,
+    "acertou": false,
+    "n_palavras": 300,
+    "inicio": "A gigante de tecnologia Apple anunciou nesta terça-feira (25) um novo programa d"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.5533333333333333,
+    "acertou": false,
+    "n_palavras": 250,
+    "inicio": "A Confederação Brasileira de Futebol (CBF) anunciou nesta quarta-feira (15) o ad"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.78,
+    "acertou": false,
+    "n_palavras": 284,
+    "inicio": "O cenário político brasileiro se encontra em um momento de grande efervescência,"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.5566666666666666,
+    "acertou": false,
+    "n_palavras": 291,
+    "inicio": "A taxa básica de juros, a Selic, permanecerá em 6,50% ao ano. A decisão foi unân"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.58,
+    "acertou": false,
+    "n_palavras": 298,
+    "inicio": "**Estudo aponta alta prevalência de doenças crônicas em idosos brasileiros**\n\nUm"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.5333333333333333,
+    "acertou": false,
+    "n_palavras": 276,
+    "inicio": "O Ministério da Justiça e Segurança Pública anunciou nesta segunda-feira (18) a "
+  },
+  {
+    "gabarito": "real",
+    "previsto": "real",
+    "prob_fake": 0.4266666666666667,
+    "acertou": true,
+    "n_palavras": 312,
+    "inicio": "Em meio a discussões sobre a reforma do ensino médio, dados recentes divulgados "
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.93,
+    "acertou": false,
+    "n_palavras": 213,
+    "inicio": "Cientistas alertam para aumento da incidência de incêndios florestais em ecossis"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.7833333333333333,
+    "acertou": false,
+    "n_palavras": 314,
+    "inicio": "Um novo capítulo na rivalidade entre as potências do futebol sul-americano se de"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.7966666666666666,
+    "acertou": false,
+    "n_palavras": 273,
+    "inicio": "A Proposta de Emenda Constitucional (PEC) que flexibiliza a previdência para ser"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.5333333333333333,
+    "acertou": false,
+    "n_palavras": 335,
+    "inicio": "A Câmara dos Deputados aprovou, em regime de urgência, o texto base de um projet"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "real",
+    "prob_fake": 0.4866666666666667,
+    "acertou": true,
+    "n_palavras": 303,
+    "inicio": "O Índice Nacional de Preços ao Consumidor Amplo (IPCA) registrou alta de 0,25% e"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.5566666666666666,
+    "acertou": false,
+    "n_palavras": 286,
+    "inicio": "A Agência Nacional de Vigilância Sanitária (Anvisa) alertou nesta terça-feira (1"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.5466666666666666,
+    "acertou": false,
+    "n_palavras": 259,
+    "inicio": "A Polícia Federal deflagrou nesta terça-feira (19) uma operação para desarticula"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "real",
+    "prob_fake": 0.49,
+    "acertou": true,
+    "n_palavras": 322,
+    "inicio": "A taxa de evasão escolar no ensino médio brasileiro atingiu um novo patamar preo"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.61,
+    "acertou": false,
+    "n_palavras": 321,
+    "inicio": "Cientistas alertam para o aumento da temperatura média global em 2018\n\nO ano de "
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.76,
+    "acertou": false,
+    "n_palavras": 248,
+    "inicio": "O avanço da tecnologia de inteligência artificial tem impulsionado o desenvolvim"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6,
+    "acertou": false,
+    "n_palavras": 230,
+    "inicio": "A Confederação Brasileira de Futebol (CBF) divulgou nesta quinta-feira (24) a ta"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.62,
+    "acertou": false,
+    "n_palavras": 240,
+    "inicio": "O governo federal anunciou nesta segunda-feira (14) um pacote de medidas emergen"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6466666666666666,
+    "acertou": false,
+    "n_palavras": 314,
+    "inicio": "O Brasil registrou um déficit primário de R$ 17,9 bilhões em novembro de 2017, s"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.7133333333333334,
+    "acertou": false,
+    "n_palavras": 295,
+    "inicio": "Pesquisadores da Universidade de São Paulo (USP) anunciaram nesta quinta-feira ("
+  },
+  {
+    "gabarito": "real",
+    "previsto": "real",
+    "prob_fake": 0.48,
+    "acertou": true,
+    "n_palavras": 261,
+    "inicio": "O Brasil registrou uma queda de 9,6% no número de homicídios dolosos em 2017, em"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.54,
+    "acertou": false,
+    "n_palavras": 331,
+    "inicio": "**Governo Anuncia Ampliação de Vagas em Cursos Técnicos para Atender Demanda do "
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.6766666666666666,
+    "acertou": false,
+    "n_palavras": 337,
+    "inicio": "**Desmatamento na Amazônia registra queda significativa em um ano, mas alertas p"
+  },
+  {
+    "gabarito": "real",
+    "previsto": "fake",
+    "prob_fake": 0.72,
+    "acertou": false,
+    "n_palavras": 311,
+    "inicio": "Avanços significativos na tecnologia de inteligência artificial têm demonstrado "
+  },
+  {
+    "gabarito": "fake",
+    "previsto": "fake",
+    "prob_fake": 0.7966666666666666,
+    "acertou": true,
+    "n_palavras": 277,
+    "inicio": "Uma recente análise divulgada por um think tank independente aponta para um poss"
+  },
+  {
+    "gabarito": "fake",
+    "previsto": "fake",
+    "prob_fake": 0.8033333333333333,
+    "acertou": true,
+    "n_palavras": 243,
+    "inicio": "Investigadores encontraram indícios de um esquema de desvio de verbas públicas o"
+  },
+  {
+    "gabarito": "fake",
+    "previsto": "fake",
+    "prob_fake": 0.6066666666666667,
+    "acertou": true,
+    "n_palavras": 261,
+    "inicio": "O Brasil registrou um inesperado crescimento em seu Produto Interno Bruto (PIB) "
+  }
+]
