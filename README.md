@@ -1,118 +1,83 @@
 # Caça à Fake News
 
-Jogo educativo multiagente para combate à desinformação em língua portuguesa.
-Projeto Final — INF 420 / INF 374 — UFV — 2026.1
+Jogo educativo sobre desinformação em português. Projeto final de INF 420 /
+INF 374, UFV, 2026.1.
 
-Três agentes de IA interagem a cada rodada:
+A cada rodada o jogador lê uma notícia, vota real ou fake e, se votar fake, marca
+os indícios que percebeu. A pontuação considera o veredito e os indícios.
 
-- **Fofoqueiro** (LLM / Gemini) — gera notícias novas (reais ou falsas), com título e fonte
-- **Checador** (Random Forest + TF-IDF) — estima a credibilidade do texto
-- **Juiz** (LLM / Gemini) — gera o feedback educativo a partir da saída do Checador, comparando jogador, detector e gabarito
+Três agentes atuam na rodada:
 
-A cada rodada o jogador lê a notícia, vota **real** ou **fake**, e — se achar que é fake — marca os indícios que percebeu. A pontuação recompensa não só o acerto, mas também a identificação correta dos sinais de desinformação.
-
-## Arquitetura das técnicas de IA
-
-O projeto aplica duas famílias distintas de IA, de forma complementar:
-
-| Agente | Técnica | Papel |
+| Agente | Técnica | Função |
 | --- | --- | --- |
-| Fofoqueiro | LLM (Gemini) via prompt estruturado | Gera as notícias parametrizadas por veracidade e dificuldade |
-| Checador | Random Forest + TF-IDF (aprendizado supervisionado) | Classifica a veracidade e produz um score |
-| Juiz | LLM (Gemini) no padrão LLM-as-a-Judge | Explica a rodada em linguagem natural, a partir da decisão do Checador |
+| Fofoqueiro | Gemini, com prompt estruturado | gera a notícia, real ou falsa, por veracidade e dificuldade |
+| Checador | Random Forest + TF-IDF | classifica a notícia e produz um score de credibilidade |
+| Juiz | Gemini, no padrão LLM-as-a-judge | explica a rodada a partir da saída do Checador, comparando jogador, detector e gabarito |
 
-O Checador é treinado sobre o corpus **Fake.br** com busca de hiperparâmetros (GridSearchCV) e validação cruzada, escolhendo a configuração de melhor F1-macro.
+## Checador
 
-## Resultados do Checador
-
-O Checador (Random Forest + TF-IDF), treinado no Fake.br com busca de
-hiperparâmetros e validação cruzada de 5 folds, atinge no conjunto de teste:
+Treinado no corpus Fake.br com GridSearchCV e validação cruzada de 5 folds,
+escolhendo a configuração de melhor F1-macro. No conjunto de teste:
 
 | Métrica | Valor |
 | --- | --- |
-| F1-macro | 0.95 |
-| AUC-ROC | 0.99 |
-| Acurácia | 0.95 |
+| F1-macro | 0,95 |
+| AUC-ROC | 0,99 |
+| Acurácia | 0,95 |
 
-O desempenho está alinhado com a literatura para o Fake.br. O modelo é
-ligeiramente mais cauteloso na classe real (recall 0.93) do que na fake
-(recall 0.97), ou seja, na dúvida tende a sinalizar fake — comportamento
-adequado para um detector de desinformação. Notícias sintéticas geradas pelo
-Fofoqueiro com temas fora da distribuição do corpus de treino podem ser
-classificadas incorretamente, ilustrando o gap entre detectores clássicos e
-texto gerado por LLM.
+O recall é 0,97 na classe fake e 0,93 na real: na dúvida, o modelo sinaliza fake.
 
-## Como rodar no VSCode
+Notícia sintética do Fofoqueiro com tema fora da distribuição do Fake.br costuma
+ser classificada errado. É o gap entre detector clássico e texto gerado por LLM,
+e aparece durante o jogo.
+
+## Rodar
 
 ```bash
-# 1. Abra a pasta do projeto no VSCode
-
-# 2. Crie e ative um ambiente virtual
 python3 -m venv .venv
-# Windows:        .venv\Scripts\activate
-# Linux/macOS:    source .venv/bin/activate
-
-# 3. Instale as dependências
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# 4. Configure a chave do Gemini
-cp .env.example .env
-# edite o .env e preencha GOOGLE_API_KEY
+cp .env.example .env               # preencha GOOGLE_API_KEY
 
-# 5. Baixe o corpus e treine o Checador (uma vez só)
-#    (instruções de download em data/README.md)
-python3 -m scripts.treinar_checador
-
-# 6. Rode o jogo
+python3 -m scripts.treinar_checador    # uma vez só; corpus em data/README.md
 streamlit run src/ui/app.py
 ```
 
-Abre em `http://localhost:8501`.
+Abre em http://localhost:8501. Sem interface: `python3 -m scripts.jogar_cli`.
 
-> Dica: para testar só a lógica, sem interface: `python3 -m scripts.jogar_cli`
-
-## Resiliência à cota da API
-
-As notícias e o feedback são sempre gerados pelo Gemini em tempo real. Quando o
-limite de requisições por minuto do plano gratuito é atingido (erro 429), o jogo
-exibe um aviso de espera na tela e tenta novamente de forma automática, sem
-interromper a partida.
-
-## Estrutura
-
-```
-Jogo_fake_news/
-├── src/
-│   ├── config.py              # detecta chave e modelo disponíveis
-│   ├── data/
-│   │   ├── loader.py           # carrega o Fake.br (para o treino)
-│   │   └── banco_demo.py       # notícias de exemplo (fallback offline)
-│   ├── agents/
-│   │   ├── fofoqueiro.py        # gerador de notícias (Gemini)
-│   │   ├── checador.py          # classificador (Random Forest)
-│   │   ├── juiz.py              # avaliador (Gemini, usa a saída do Checador)
-│   │   └── gemini_utils.py      # retry com espera ao estourar a cota
-│   ├── game/
-│   │   ├── engine.py            # regras de rodada e pontuação
-│   │   └── indicios.py          # detecção dos indícios para pontuar
-│   └── ui/app.py                # interface Streamlit
-├── scripts/
-│   ├── treinar_checador.py      # treina o RF com GridSearch
-│   └── jogar_cli.py             # joga uma rodada no terminal
-├── data/                        # corpus (não versionado)
-├── models/                      # modelos treinados (não versionado)
-└── requirements.txt
-```
+Quando a cota por minuto do Gemini estoura (erro 429), o jogo avisa na tela e
+tenta de novo sozinho, sem encerrar a partida.
 
 ## Pontuação
 
-Por rodada: **+10** por acertar real/fake. Em notícias falsas, há um ajuste pelos
-indícios marcados — **+3** por indício correto e **−2** por indício que não se
-aplica (indícios que dependem de conhecimento de mundo são neutros e não punem).
-A pontuação da rodada nunca fica abaixo de 10 quando o jogador acerta o veredito.
++10 por acertar real ou fake. Em notícia falsa, +3 por indício correto e −2 por
+indício que não se aplica; indício que depende de conhecimento de mundo não pune.
+Acertando o veredito, a rodada não fica abaixo de 10.
 
-## Considerações éticas
+## Arquivos
 
-O Fofoqueiro gera notícias falsas sintéticas com fins exclusivamente educativos.
-As restrições no prompt impedem: citar pessoas reais, desinformação perigosa de
-saúde, incitação a ódio ou violência, e uso de grupos vulneráveis.
+```
+src/
+  config.py              detecta chave e modelo disponíveis
+  data/loader.py         carrega o Fake.br para o treino
+  data/banco_demo.py     notícias de exemplo, para rodar sem API
+  agents/fofoqueiro.py   gerador de notícias
+  agents/checador.py     classificador
+  agents/juiz.py         avaliador, usa a saída do Checador
+  agents/gemini_utils.py retry com espera quando a cota estoura
+  game/engine.py         regras de rodada e pontuação
+  game/indicios.py       detecção dos indícios
+  ui/app.py              interface Streamlit
+scripts/
+  treinar_checador.py    treina o Random Forest com GridSearch
+  jogar_cli.py           joga uma rodada no terminal
+data/                    corpus, não versionado
+models/                  modelos treinados, não versionados
+```
+
+## Ética
+
+As notícias falsas são sintéticas e de uso educativo. O prompt proíbe citar
+pessoa real, desinformação de saúde, incitação a ódio ou violência e uso de grupo
+vulnerável.
